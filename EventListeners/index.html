@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <style>
+        .col{
+            height: 200px;
+            padding: 10px;
+            margin: 10px;
+            position: relative;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            position: absolute;
+            bottom: 5%;
+            padding: 5px 30px;
+            background-color: transparent;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container border mt-3">
+        <h1 id="main-heading" class="text-center">
+            Event Listeners
+        </h1>
+    <div class="row row-col-3">
+        <div class="col box-1 border">
+            <h2>Example 1</h2>
+            <button onclick="alert('This is a test');">Enter</button>
+        </div>
+        <div class="col box-2 border">
+            <h2>Example 2</h2>
+            <button class="btn-2">Enter</button>
+        </div>
+        <div class="col box-3 border">
+            <h2>Example 3</h2>
+            <button class="btn-3">Enter</button>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

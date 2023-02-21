@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <style>
+        .col{
+            height: 200px;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            position: relative;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            position: absolute;
+            bottom: 50%;
+            padding: 5px 30px;
+            background-color: transparent;
+            border-radius: 10px;
+        }
+
+        .hidden-content{
+            display: none;
+        }
+
+        .hidden-content.reveal-btn{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container border mt-3">
+        <h1 id="main-heading" class="text-center">
+            Event Listeners
+        </h1>
+    <div class="row">
+        <div class="col reveal-btn border">
+            <button>Reveal More</button>
+        </div>
+        <div class="col col-md-8 hidden-content border">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, recusandae! Veniam, atque explicabo sunt dicta reprehenderit veritatis aliquid obcaecati distinctio eos magni saepe ea ipsum!
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // DOM Manipulation
+        // Reveal Event
+
+        const revealBtn = document.querySelector('.reveal-btn');
+        const hiddenContent = document.querySelector('.hidden-content');
+
+        function revealConten() {
+            if (hiddenContent.classList.contains('reveal-btn')) {
+                hiddenContent.classList.remove('reveal-btn')
+            } else {
+                hiddenContent.classList.add('reveal-btn')
+            }
+        }
+
+        revealBtn.addEventListener("click", revealConten);
+    </script>
+</body>
+
+</html>
